@@ -1,0 +1,7 @@
+name: model_interfaces
+description: A package with common interfaces for your models that have IDs, titles, etc.
+version: 0.0.1
+homepage: https://github.com/alexeyinkin/dart-model-interfaces
+
+environment:
+  sdk: ">=2.12.0 <3.0.0"
