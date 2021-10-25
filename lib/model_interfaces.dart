@@ -1,38 +1,7 @@
-abstract class WithId<T> {
-  T get id;
-
-  static T? getById<I, T extends WithId<I>>(Iterable<T> items, I id) {
-    for (final item in items) {
-      if (item.id == id) return item;
-    }
-    return null;
-  }
-}
-
-abstract class WithTitle {
-  String get title;
-
-  static Iterable<String> getTitles(List<WithTitle> items) {
-    return items
-        .map((item) => item.title);
-  }
-
-  static int compareCaseInsensitive(WithTitle a, WithTitle b) {
-    return a.title.toLowerCase().compareTo(
-      b.title.toLowerCase(),
-    );
-  }
-}
-
-class WithIdTitle<T> implements WithId<T>, WithTitle {
-  @override
-  final T id;
-
-  @override
-  final String title;
-
-  const WithIdTitle({
-    required this.id,
-    required this.title,
-  });
-}
+export 'src/with_children.dart'                 show WithChildren;
+export 'src/with_id.dart'                       show WithId;
+export 'src/with_id_children_parent.dart'       show WithIdChildrenParent;
+export 'src/with_id_title.dart'                 show WithIdTitle;
+export 'src/with_id_title_children_parent.dart' show WithIdTitleChildrenParent;
+export 'src/with_parent.dart'                   show WithParent;
+export 'src/with_title.dart'                    show WithTitle;

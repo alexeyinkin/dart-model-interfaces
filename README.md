@@ -9,8 +9,16 @@ You often need models of only ID and title. For this reason, it is a class
 not an interface. But you can use it as an interface by implementing it
 in your models.
 
+* `WithChildren<C>`, `WithParent<P>`. For your models that have some hierarchy.
+`C` and `P` can be the same as the implementing class for homogeneous hierarchy.
+
+* `WithIdChildrenParent<I, C, P>`, `WithIdTitleChildrenParent<I, C, P>`.
+Other useful combinations.
+
 ## Additional information
 
 This package is created mostly for my internal use so it is not documented well.
+Expect breaking changes.
+
 Feel free to file issues if you find bugs or want some extra features.
 Before contributing, it is a good idea to file an issue first to discuss it.
