@@ -1,3 +1,7 @@
+## 0.0.3
+
+* Added `WithId.mapByIds()`.
+
 ## 0.0.2
 
 * Accept `Iterable` instead of `List` for many inputs.

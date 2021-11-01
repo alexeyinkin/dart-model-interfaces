@@ -1,3 +1,5 @@
+import 'dart:collection';
+
 abstract class WithId<I> {
   I get id;
 
@@ -23,5 +25,15 @@ abstract class WithId<I> {
 
   static Iterable<I> getIds<I>(Iterable<WithId<I>> items) {
     return items.map((item) => item.id);
+  }
+
+  static Map<I, T> mapByIds<I, T extends WithId<I>>(List<T> list) {
+    final map = LinkedHashMap<I, T>();
+
+    for (final item in list) {
+      map[item.id] = item;
+    }
+
+    return map;
   }
 }
