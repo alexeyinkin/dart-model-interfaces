@@ -1,3 +1,7 @@
+## 0.0.4
+
+* Added `Normalizable`.
+
 ## 0.0.3
 
 * Added `WithId.mapByIds()`.

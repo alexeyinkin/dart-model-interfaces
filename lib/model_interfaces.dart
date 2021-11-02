@@ -1,3 +1,4 @@
+export 'src/normalizable.dart'                  show Normalizable;
 export 'src/with_children.dart'                 show WithChildren;
 export 'src/with_id.dart'                       show WithId;
 export 'src/with_id_children_parent.dart'       show WithIdChildrenParent;
