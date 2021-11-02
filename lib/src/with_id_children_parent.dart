@@ -6,4 +6,5 @@ abstract class WithIdChildrenParent<I, C, P> implements
     WithId<I>,
     WithChildren<C>,
     WithParent<P>
-{}
+{
+}

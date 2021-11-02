@@ -1,3 +1,10 @@
+## 0.0.5
+
+* Added `WithAncestorIds`.
+* Added `WithIdHomogenousChildrenParent`.
+* Added `WithIdTitleHomogenousChildrenParent`.
+* Changed `Normalizable.toJsons()` from `Iterable` to `List`.
+
 ## 0.0.4
 
 * Added `Normalizable`.

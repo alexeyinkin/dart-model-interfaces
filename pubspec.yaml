@@ -1,6 +1,6 @@
 name: model_interfaces
 description: Common interfaces for your models that have IDs, titles, etc.
-version: 0.0.4
+version: 0.0.5
 homepage: https://github.com/alexeyinkin/dart-model-interfaces
 
 environment:
