@@ -15,6 +15,8 @@ in your models.
 * `WithIdChildrenParent<I, C, P>`, `WithIdTitleChildrenParent<I, C, P>`.
 Other useful combinations.
 
+* `Normalizable`. Declares `toJson()`.
+
 ## Additional information
 
 This package is created mostly for my internal use so it is not documented well.
