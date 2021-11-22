@@ -1,3 +1,7 @@
+## 0.1.0
+
+* Breaking: `WithIdTitle` constructor uses positional arguments.
+
 ## 0.0.5
 
 * Added `WithAncestorIds`.

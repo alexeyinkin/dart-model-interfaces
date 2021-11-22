@@ -8,8 +8,8 @@ class WithIdTitle<T> implements WithId<T>, WithTitle {
   @override
   final String title;
 
-  const WithIdTitle({
-    required this.id,
-    required this.title,
-  });
+  const WithIdTitle(
+    this.id,
+    this.title,
+  );
 }
