@@ -1,6 +1,10 @@
+## 0.1.1
+
+* Added `WithHomogenousParent`.
+
 ## 0.1.0
 
-* Breaking: `WithIdTitle` constructor uses positional arguments.
+* **BREAKING:** `WithIdTitle` constructor uses positional arguments.
 
 ## 0.0.5
 
