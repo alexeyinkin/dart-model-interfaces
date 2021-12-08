@@ -1,4 +1,5 @@
 export 'src/models/normalizable.dart'                             show Normalizable;
+export 'src/models/range.dart'                                    show Range;
 export 'src/models/with_ancestor_ids.dart'                        show WithAncestorIds;
 export 'src/models/with_children.dart'                            show WithChildren;
 export 'src/models/with_homogenous_parent.dart'                   show WithHomogenousParent;

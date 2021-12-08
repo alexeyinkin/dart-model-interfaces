@@ -1,3 +1,7 @@
+## 0.1.2
+
+* Added `Range`.
+
 ## 0.1.1
 
 * Added `WithHomogenousParent`.
