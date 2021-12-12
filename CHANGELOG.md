@@ -1,3 +1,7 @@
+## 0.1.3
+
+* `Range` is now non-abstract.
+
 ## 0.1.2
 
 * Added `Range`.

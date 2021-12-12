@@ -1,9 +1,11 @@
 /// Anything with comparable [start] and [end].
 /// Allows to compare ranges to see if they overlap
 /// or entirely go one after another.
-abstract class Range<T extends Comparable> {
-  T get start;
-  T get end;
+class Range<T extends Comparable> {
+  final T start;
+  final T end;
+
+  Range(this.start, this.end);
 
   /// Returns if [a] starts after [b] ends.
   static bool afterInclusive<T extends Comparable>(Range<T> a, Range<T> b) {
