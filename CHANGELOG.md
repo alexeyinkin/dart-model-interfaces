@@ -1,3 +1,7 @@
+## 0.1.4
+
+* `WithId.mapByIds` accepts `Iterable`.
+
 ## 0.1.3
 
 * `Range` is now non-abstract.

@@ -27,10 +27,10 @@ abstract class WithId<I> {
     return items.map((item) => item.id);
   }
 
-  static Map<I, T> mapByIds<I, T extends WithId<I>>(List<T> list) {
+  static Map<I, T> mapByIds<I, T extends WithId<I>>(Iterable<T> items) {
     final map = LinkedHashMap<I, T>();
 
-    for (final item in list) {
+    for (final item in items) {
       map[item.id] = item;
     }
 
