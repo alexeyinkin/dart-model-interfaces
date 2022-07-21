@@ -1,19 +1,17 @@
 import 'with_parent.dart';
 
-abstract class WithHomogenousParent<T extends WithHomogenousParent<T>> implements WithParent<T> {
+/// Anything with an optional parent of the same type.
+abstract class WithHomogenousParent<T extends WithHomogenousParent<T>>
+    implements WithParent<T> {
+  @override
   T? get parent;
 
-  static List<T> withAncestors<T extends WithHomogenousParent<T>>(T obj) {
-    final list = <T>[];
-    _addThisAndAncestorsToList(obj, list);
-    return list;
-  }
-
-  static void _addThisAndAncestorsToList<T extends WithHomogenousParent<T>>(T obj, List<T> list) {
-    list.add(obj);
-
-    if (obj.parent != null) {
-      _addThisAndAncestorsToList<T>(obj.parent!, list);
-    }
+  /// Returns a list with this object and all its ancestors
+  /// in the upstream order.
+  Iterable<WithHomogenousParent<T>> withAncestors() {
+    return [
+      this,
+      if (parent != null) ...parent!.withAncestors(),
+    ];
   }
 }

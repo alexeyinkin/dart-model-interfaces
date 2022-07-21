@@ -1,8 +1,11 @@
 import 'dart:collection';
 
+/// Anything with an ID.
 abstract class WithId<I> {
+  /// The ID.
   I get id;
 
+  /// Finds an item with a given [id].
   static T? getById<I, T extends WithId<I>>(Iterable<T> items, I id) {
     for (final item in items) {
       if (item.id == id) return item;
@@ -10,12 +13,16 @@ abstract class WithId<I> {
     return null;
   }
 
-  static Iterable<T> getByIds<I, T extends WithId<I>>(Iterable<T> items, Iterable<I> ids) {
-    final idsMap = <I, void>{for (var id in ids) id: null};
+  /// Finds items with given [ids].
+  static Iterable<T> getByIds<I, T extends WithId<I>>(
+    Iterable<T> items,
+    Iterable<I> ids,
+  ) {
+    final idsSet = ids.toSet();
     final result = <T>[];
 
     for (final item in items) {
-      if (idsMap.containsKey(item.id)) {
+      if (idsSet.contains(item.id)) {
         result.add(item);
       }
     }
@@ -23,17 +30,13 @@ abstract class WithId<I> {
     return result;
   }
 
+  /// Returns an [Iterable] with [id] of each item.
   static Iterable<I> getIds<I>(Iterable<WithId<I>> items) {
     return items.map((item) => item.id);
   }
 
+  /// Returns a [LinkedHashMap] with all [items] mapped by [id].
   static Map<I, T> mapByIds<I, T extends WithId<I>>(Iterable<T> items) {
-    final map = LinkedHashMap<I, T>();
-
-    for (final item in items) {
-      map[item.id] = item;
-    }
-
-    return map;
+    return {for (final item in items) item.id: item};
   }
 }

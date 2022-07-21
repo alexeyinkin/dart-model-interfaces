@@ -1,3 +1,13 @@
+## 0.2.0
+
+* **BREAKING:** `WithHomogenousParent.withAncestors` is now non-static and returns an `Iterable`.
+* **BREAKING:** `Normalizable.toJsons` returns an `Iterable` instead of a `List`.
+* Added `Normalizable.toJsonList`.
+* Added `growable` param to `Normalizable.toJsons`.
+* Using `total_lints`, fixed issues, fixed formatting.
+* Re-licensed under MIT-0.
+* Improved doc comments.
+
 ## 0.1.4
 
 * `WithId.mapByIds` accepts `Iterable`.

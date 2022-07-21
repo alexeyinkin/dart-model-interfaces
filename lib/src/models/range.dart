@@ -1,10 +1,15 @@
 /// Anything with comparable [start] and [end].
+///
 /// Allows to compare ranges to see if they overlap
 /// or entirely go one after another.
 class Range<T extends Comparable> {
+  /// The start of the range.
   final T start;
+
+  /// The end of the range.
   final T end;
 
+  /// Creates an instance.
   Range(this.start, this.end);
 
   /// Returns if [a] starts after [b] ends.
