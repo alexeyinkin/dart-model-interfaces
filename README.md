@@ -1,26 +1,36 @@
-This package provides common interfaces for your models:
+[![Pub Package](https://img.shields.io/pub/v/model_interfaces.svg)](https://pub.dev/packages/model_interfaces)
+[![GitHub](https://img.shields.io/github/license/alexeyinkin/dart-model-interfaces)](https://github.com/alexeyinkin/dart-model-interfaces/blob/main/LICENSE)
+[![CodeFactor](https://img.shields.io/codefactor/grade/github/alexeyinkin/dart-model-interfaces?style=flat-square)](https://www.codefactor.io/repository/github/alexeyinkin/dart-model-interfaces)
+[![Support Chat](https://img.shields.io/badge/support%20chat-telegram-brightgreen)](https://ainkin.com/chat)
 
-* `WithId<T>`. For your models that have IDs. `T` is commonly being `int` or `String`.
+This package provides common interfaces for your models: `WithId<I>`, `WithTitle`,
+`WithChildren<C>`, etc. and their combinations like `WithIdTitle<I>`.
 
-* `WithTitle`. For your models that have a concept of a visible title.
+You can make some models in your package implement these interfaces.
+It allows you to make abstract widgets, controllers and any other logic that can
+show and work on any of these models.
 
-* `WithIdTitle<T>`. For your models that have both.
-You often need models of only ID and title. For this reason, it is a class
-not an interface. But you can use it as an interface by implementing it
-in your models.
+The benefits are:
 
-* `WithChildren<C>`, `WithParent<P>`. For your models that have some hierarchy.
-`C` and `P` can be the same as the implementing class for homogeneous hierarchy.
+- **Less code duplication** for lists, dropdowns, chips, etc.,
+  because you no longer need a widget per class.
+- **Naming control**. If you implement these, no class will stray from your rules,
+  e.g. by using `name` instead of `title`.
 
-* `WithIdChildrenParent<I, C, P>`, `WithIdTitleChildrenParent<I, C, P>`.
-Other useful combinations.
+Many programmers use their own parent classes like these per project.
+This package allows you to:
 
-* `Normalizable`. Declares `toJson()`.
+- Reduce the work to start a project.
+- Copy models between your projects as they are sure to follow the same interfaces.
 
-## Additional information
+See the full list of interfaces
+[here](https://pub.dev/documentation/model_interfaces/latest/model_interfaces/model_interfaces-library.html)
 
-This package is created mostly for my internal use so it is not documented well.
-Expect breaking changes.
+If you need an extra combination, you can mix the interfaces yourself in your project.
+Or consider making a PR.
 
-Feel free to file issues if you find bugs or want some extra features.
-Before contributing, it is a good idea to file an issue first to discuss it.
+## Tech Support Chat
+
+Do you have any questions? Feel free to ask in the [Telegram Support Chat](https://ainkin.com/chat).
+
+Or even just join to say 'Hi!'. I like to hear from the users.
