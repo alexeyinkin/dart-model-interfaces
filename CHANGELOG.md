@@ -1,3 +1,12 @@
+## 0.3.0
+
+* **BREAKING:** Added `ancestorIdsDownstream` and `ancestorIdsUpstream` to `WithAncestorIds`.
+* Deprecated `WithAncestorIds.ancestorIds`.
+* Added `WithSlug`, `WithIdSlug`, `WithIdSlugTitle`.
+* Moved many instance methods to extensions so implementing is possible instead of extending.
+* Renamed methods in `Range` to be more precise. The older ones are deprecated.
+  Added instance method equivalents.
+
 ## 0.2.0
 
 * **BREAKING:** `WithHomogenousParent.withAncestors` is now non-static and returns an `Iterable`.
