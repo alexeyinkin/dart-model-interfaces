@@ -2,6 +2,8 @@ import 'dart:collection';
 
 /// Anything with an ID.
 abstract class WithId<I> {
+  const WithId();
+
   /// The ID.
   I get id;
 
