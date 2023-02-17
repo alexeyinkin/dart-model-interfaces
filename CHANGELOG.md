@@ -1,3 +1,7 @@
+## 0.3.1
+
+* Const constructor in `WithId`.
+
 ## 0.3.0
 
 * **BREAKING:** Added `ancestorIdsDownstream` and `ancestorIdsUpstream` to `WithAncestorIds`.
