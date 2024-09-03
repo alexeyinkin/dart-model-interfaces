@@ -1,3 +1,4 @@
+export 'src/models/multilingual_string.dart';
 export 'src/models/normalizable.dart';
 export 'src/models/range.dart';
 export 'src/models/with_ancestor_ids.dart';

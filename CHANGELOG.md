@@ -1,3 +1,10 @@
+## 0.3.2
+
+* Added `MultilingualString`.
+* In `Range`, renamed all methods containing 'overlap' to 'intersect'
+  as it is the preferred math term for ranges overlapping deeper than their endpoints.
+  Added deprecated forwarders for the old methods.
+
 ## 0.3.1
 
 * Const constructor in `WithId`.
