@@ -1,3 +1,7 @@
+## 0.3.3
+
+* Added `Iterable<WithId>.getById()`, `.getByIds()`, `.ids`, and `.mapByIds()`, deprecated the corresponding static methods on `WithId`.
+
 ## 0.3.2
 
 * Added `MultilingualString`.
